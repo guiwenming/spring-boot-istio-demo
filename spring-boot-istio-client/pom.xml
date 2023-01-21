@@ -60,6 +60,7 @@
                     <executable>true</executable>
                 </configuration>
             </plugin>
+            <!--去掉Docker过程，放到cicd流程中
             <plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>dockerfile-maven-plugin</artifactId>
@@ -88,7 +89,7 @@
                         <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
                     </buildArgs>
                 </configuration>
-            </plugin>
+            </plugin> -->
         </plugins>
     </build>
 </project>
