@@ -103,15 +103,15 @@ public final class HelloWorldService {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return HelloWorldService.internal_static_helloworld_HelloRequest_descriptor;
+      return site.wendev.spring.boot.istio.client.api.HelloWorldService.internal_static_helloworld_HelloRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return HelloWorldService.internal_static_helloworld_HelloRequest_fieldAccessorTable
+      return site.wendev.spring.boot.istio.client.api.HelloWorldService.internal_static_helloworld_HelloRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              HelloWorldService.HelloRequest.class, HelloWorldService.HelloRequest.Builder.class);
+              site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest.class, site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest.Builder.class);
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
@@ -189,10 +189,10 @@ public final class HelloWorldService {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof HelloWorldService.HelloRequest)) {
+      if (!(obj instanceof site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest)) {
         return super.equals(obj);
       }
-      HelloWorldService.HelloRequest other = (HelloWorldService.HelloRequest) obj;
+      site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest other = (site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest) obj;
 
       if (!getName()
           .equals(other.getName())) return false;
@@ -214,69 +214,69 @@ public final class HelloWorldService {
       return hash;
     }
 
-    public static HelloWorldService.HelloRequest parseFrom(
+    public static site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static HelloWorldService.HelloRequest parseFrom(
+    public static site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static HelloWorldService.HelloRequest parseFrom(
+    public static site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static HelloWorldService.HelloRequest parseFrom(
+    public static site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static HelloWorldService.HelloRequest parseFrom(byte[] data)
+    public static site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static HelloWorldService.HelloRequest parseFrom(
+    public static site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static HelloWorldService.HelloRequest parseFrom(java.io.InputStream input)
+    public static site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static HelloWorldService.HelloRequest parseFrom(
+    public static site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static HelloWorldService.HelloRequest parseDelimitedFrom(java.io.InputStream input)
+    public static site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static HelloWorldService.HelloRequest parseDelimitedFrom(
+    public static site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static HelloWorldService.HelloRequest parseFrom(
+    public static site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static HelloWorldService.HelloRequest parseFrom(
+    public static site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -289,7 +289,7 @@ public final class HelloWorldService {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(HelloWorldService.HelloRequest prototype) {
+    public static Builder newBuilder(site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -310,21 +310,21 @@ public final class HelloWorldService {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:helloworld.HelloRequest)
-        HelloWorldService.HelloRequestOrBuilder {
+        site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return HelloWorldService.internal_static_helloworld_HelloRequest_descriptor;
+        return site.wendev.spring.boot.istio.client.api.HelloWorldService.internal_static_helloworld_HelloRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return HelloWorldService.internal_static_helloworld_HelloRequest_fieldAccessorTable
+        return site.wendev.spring.boot.istio.client.api.HelloWorldService.internal_static_helloworld_HelloRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                HelloWorldService.HelloRequest.class, HelloWorldService.HelloRequest.Builder.class);
+                site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest.class, site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest.Builder.class);
       }
 
-      // Construct using site.wendev.spring.boot.istio.api.HelloWorldService.HelloRequest.newBuilder()
+      // Construct using site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -350,17 +350,17 @@ public final class HelloWorldService {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return HelloWorldService.internal_static_helloworld_HelloRequest_descriptor;
+        return site.wendev.spring.boot.istio.client.api.HelloWorldService.internal_static_helloworld_HelloRequest_descriptor;
       }
 
       @java.lang.Override
-      public HelloWorldService.HelloRequest getDefaultInstanceForType() {
-        return HelloWorldService.HelloRequest.getDefaultInstance();
+      public site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest getDefaultInstanceForType() {
+        return site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public HelloWorldService.HelloRequest build() {
-        HelloWorldService.HelloRequest result = buildPartial();
+      public site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest build() {
+        site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -368,8 +368,8 @@ public final class HelloWorldService {
       }
 
       @java.lang.Override
-      public HelloWorldService.HelloRequest buildPartial() {
-        HelloWorldService.HelloRequest result = new HelloWorldService.HelloRequest(this);
+      public site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest buildPartial() {
+        site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest result = new site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest(this);
         result.name_ = name_;
         onBuilt();
         return result;
@@ -409,16 +409,16 @@ public final class HelloWorldService {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof HelloWorldService.HelloRequest) {
-          return mergeFrom((HelloWorldService.HelloRequest)other);
+        if (other instanceof site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest) {
+          return mergeFrom((site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(HelloWorldService.HelloRequest other) {
-        if (other == HelloWorldService.HelloRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest other) {
+        if (other == site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
           onChanged();
@@ -438,11 +438,11 @@ public final class HelloWorldService {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        HelloWorldService.HelloRequest parsedMessage = null;
+        site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (HelloWorldService.HelloRequest) e.getUnfinishedMessage();
+          parsedMessage = (site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -544,12 +544,12 @@ public final class HelloWorldService {
     }
 
     // @@protoc_insertion_point(class_scope:helloworld.HelloRequest)
-    private static final HelloWorldService.HelloRequest DEFAULT_INSTANCE;
+    private static final site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new HelloWorldService.HelloRequest();
+      DEFAULT_INSTANCE = new site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest();
     }
 
-    public static HelloWorldService.HelloRequest getDefaultInstance() {
+    public static site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -574,7 +574,7 @@ public final class HelloWorldService {
     }
 
     @java.lang.Override
-    public HelloWorldService.HelloRequest getDefaultInstanceForType() {
+    public site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -669,15 +669,15 @@ public final class HelloWorldService {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return HelloWorldService.internal_static_helloworld_HelloResponse_descriptor;
+      return site.wendev.spring.boot.istio.client.api.HelloWorldService.internal_static_helloworld_HelloResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return HelloWorldService.internal_static_helloworld_HelloResponse_fieldAccessorTable
+      return site.wendev.spring.boot.istio.client.api.HelloWorldService.internal_static_helloworld_HelloResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              HelloWorldService.HelloResponse.class, HelloWorldService.HelloResponse.Builder.class);
+              site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse.class, site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse.Builder.class);
     }
 
     public static final int MESSAGE_FIELD_NUMBER = 1;
@@ -755,10 +755,10 @@ public final class HelloWorldService {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof HelloWorldService.HelloResponse)) {
+      if (!(obj instanceof site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse)) {
         return super.equals(obj);
       }
-      HelloWorldService.HelloResponse other = (HelloWorldService.HelloResponse) obj;
+      site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse other = (site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse) obj;
 
       if (!getMessage()
           .equals(other.getMessage())) return false;
@@ -780,69 +780,69 @@ public final class HelloWorldService {
       return hash;
     }
 
-    public static HelloWorldService.HelloResponse parseFrom(
+    public static site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static HelloWorldService.HelloResponse parseFrom(
+    public static site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static HelloWorldService.HelloResponse parseFrom(
+    public static site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static HelloWorldService.HelloResponse parseFrom(
+    public static site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static HelloWorldService.HelloResponse parseFrom(byte[] data)
+    public static site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static HelloWorldService.HelloResponse parseFrom(
+    public static site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static HelloWorldService.HelloResponse parseFrom(java.io.InputStream input)
+    public static site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static HelloWorldService.HelloResponse parseFrom(
+    public static site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static HelloWorldService.HelloResponse parseDelimitedFrom(java.io.InputStream input)
+    public static site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static HelloWorldService.HelloResponse parseDelimitedFrom(
+    public static site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static HelloWorldService.HelloResponse parseFrom(
+    public static site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static HelloWorldService.HelloResponse parseFrom(
+    public static site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -855,7 +855,7 @@ public final class HelloWorldService {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(HelloWorldService.HelloResponse prototype) {
+    public static Builder newBuilder(site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -876,21 +876,21 @@ public final class HelloWorldService {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:helloworld.HelloResponse)
-        HelloWorldService.HelloResponseOrBuilder {
+        site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return HelloWorldService.internal_static_helloworld_HelloResponse_descriptor;
+        return site.wendev.spring.boot.istio.client.api.HelloWorldService.internal_static_helloworld_HelloResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return HelloWorldService.internal_static_helloworld_HelloResponse_fieldAccessorTable
+        return site.wendev.spring.boot.istio.client.api.HelloWorldService.internal_static_helloworld_HelloResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                HelloWorldService.HelloResponse.class, HelloWorldService.HelloResponse.Builder.class);
+                site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse.class, site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse.Builder.class);
       }
 
-      // Construct using site.wendev.spring.boot.istio.api.HelloWorldService.HelloResponse.newBuilder()
+      // Construct using site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -916,17 +916,17 @@ public final class HelloWorldService {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return HelloWorldService.internal_static_helloworld_HelloResponse_descriptor;
+        return site.wendev.spring.boot.istio.client.api.HelloWorldService.internal_static_helloworld_HelloResponse_descriptor;
       }
 
       @java.lang.Override
-      public HelloWorldService.HelloResponse getDefaultInstanceForType() {
-        return HelloWorldService.HelloResponse.getDefaultInstance();
+      public site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse getDefaultInstanceForType() {
+        return site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public HelloWorldService.HelloResponse build() {
-        HelloWorldService.HelloResponse result = buildPartial();
+      public site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse build() {
+        site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -934,8 +934,8 @@ public final class HelloWorldService {
       }
 
       @java.lang.Override
-      public HelloWorldService.HelloResponse buildPartial() {
-        HelloWorldService.HelloResponse result = new HelloWorldService.HelloResponse(this);
+      public site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse buildPartial() {
+        site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse result = new site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse(this);
         result.message_ = message_;
         onBuilt();
         return result;
@@ -975,16 +975,16 @@ public final class HelloWorldService {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof HelloWorldService.HelloResponse) {
-          return mergeFrom((HelloWorldService.HelloResponse)other);
+        if (other instanceof site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse) {
+          return mergeFrom((site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(HelloWorldService.HelloResponse other) {
-        if (other == HelloWorldService.HelloResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse other) {
+        if (other == site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse.getDefaultInstance()) return this;
         if (!other.getMessage().isEmpty()) {
           message_ = other.message_;
           onChanged();
@@ -1004,11 +1004,11 @@ public final class HelloWorldService {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        HelloWorldService.HelloResponse parsedMessage = null;
+        site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (HelloWorldService.HelloResponse) e.getUnfinishedMessage();
+          parsedMessage = (site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1110,12 +1110,12 @@ public final class HelloWorldService {
     }
 
     // @@protoc_insertion_point(class_scope:helloworld.HelloResponse)
-    private static final HelloWorldService.HelloResponse DEFAULT_INSTANCE;
+    private static final site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new HelloWorldService.HelloResponse();
+      DEFAULT_INSTANCE = new site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse();
     }
 
-    public static HelloWorldService.HelloResponse getDefaultInstance() {
+    public static site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1140,7 +1140,7 @@ public final class HelloWorldService {
     }
 
     @java.lang.Override
-    public HelloWorldService.HelloResponse getDefaultInstanceForType() {
+    public site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1169,8 +1169,9 @@ public final class HelloWorldService {
       "t\022\014\n\004name\030\001 \001(\t\" \n\rHelloResponse\022\017\n\007mess" +
       "age\030\001 \001(\t2O\n\nHelloWorld\022A\n\010SayHello\022\030.he" +
       "lloworld.HelloRequest\032\031.helloworld.Hello" +
-      "Response\"\000B6\n!site.wendev.spring.boot.is" +
-      "tio.apiB\021HelloWorldServiceb\006proto3"
+      "Response\"\000B=\n(site.wendev.spring.boot.is" +
+      "tio.client.apiB\021HelloWorldServiceb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

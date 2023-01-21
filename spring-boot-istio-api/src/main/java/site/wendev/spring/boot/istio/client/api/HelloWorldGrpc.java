@@ -1,11 +1,18 @@
 package site.wendev.spring.boot.istio.client.api;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
 import static io.grpc.stub.ClientCalls.asyncUnaryCall;
 import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
 import static io.grpc.stub.ClientCalls.blockingUnaryCall;
 import static io.grpc.stub.ClientCalls.futureUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
@@ -20,29 +27,29 @@ public final class HelloWorldGrpc {
   public static final String SERVICE_NAME = "helloworld.HelloWorld";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<HelloWorldService.HelloRequest,
-          HelloWorldService.HelloResponse> getSayHelloMethod;
+  private static volatile io.grpc.MethodDescriptor<site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest,
+      site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse> getSayHelloMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "SayHello",
-      requestType = HelloWorldService.HelloRequest.class,
-      responseType = HelloWorldService.HelloResponse.class,
+      requestType = site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest.class,
+      responseType = site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<HelloWorldService.HelloRequest,
-          HelloWorldService.HelloResponse> getSayHelloMethod() {
-    io.grpc.MethodDescriptor<HelloWorldService.HelloRequest, HelloWorldService.HelloResponse> getSayHelloMethod;
+  public static io.grpc.MethodDescriptor<site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest,
+      site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse> getSayHelloMethod() {
+    io.grpc.MethodDescriptor<site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest, site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse> getSayHelloMethod;
     if ((getSayHelloMethod = HelloWorldGrpc.getSayHelloMethod) == null) {
       synchronized (HelloWorldGrpc.class) {
         if ((getSayHelloMethod = HelloWorldGrpc.getSayHelloMethod) == null) {
           HelloWorldGrpc.getSayHelloMethod = getSayHelloMethod =
-              io.grpc.MethodDescriptor.<HelloWorldService.HelloRequest, HelloWorldService.HelloResponse>newBuilder()
+              io.grpc.MethodDescriptor.<site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest, site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SayHello"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  HelloWorldService.HelloRequest.getDefaultInstance()))
+                  site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  HelloWorldService.HelloResponse.getDefaultInstance()))
+                  site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse.getDefaultInstance()))
               .setSchemaDescriptor(new HelloWorldMethodDescriptorSupplier("SayHello"))
               .build();
         }
@@ -101,8 +108,8 @@ public final class HelloWorldGrpc {
 
     /**
      */
-    public void sayHello(HelloWorldService.HelloRequest request,
-                         io.grpc.stub.StreamObserver<HelloWorldService.HelloResponse> responseObserver) {
+    public void sayHello(site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest request,
+        io.grpc.stub.StreamObserver<site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getSayHelloMethod(), responseObserver);
     }
 
@@ -112,8 +119,8 @@ public final class HelloWorldGrpc {
             getSayHelloMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                      HelloWorldService.HelloRequest,
-                      HelloWorldService.HelloResponse>(
+                site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest,
+                site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse>(
                   this, METHODID_SAY_HELLO)))
           .build();
     }
@@ -135,8 +142,8 @@ public final class HelloWorldGrpc {
 
     /**
      */
-    public void sayHello(HelloWorldService.HelloRequest request,
-                         io.grpc.stub.StreamObserver<HelloWorldService.HelloResponse> responseObserver) {
+    public void sayHello(site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest request,
+        io.grpc.stub.StreamObserver<site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getSayHelloMethod(), getCallOptions()), request, responseObserver);
     }
@@ -158,7 +165,7 @@ public final class HelloWorldGrpc {
 
     /**
      */
-    public HelloWorldService.HelloResponse sayHello(HelloWorldService.HelloRequest request) {
+    public site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse sayHello(site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest request) {
       return blockingUnaryCall(
           getChannel(), getSayHelloMethod(), getCallOptions(), request);
     }
@@ -180,8 +187,8 @@ public final class HelloWorldGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<HelloWorldService.HelloResponse> sayHello(
-        HelloWorldService.HelloRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse> sayHello(
+        site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getSayHelloMethod(), getCallOptions()), request);
     }
@@ -207,8 +214,8 @@ public final class HelloWorldGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_SAY_HELLO:
-          serviceImpl.sayHello((HelloWorldService.HelloRequest) request,
-              (io.grpc.stub.StreamObserver<HelloWorldService.HelloResponse>) responseObserver);
+          serviceImpl.sayHello((site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloRequest) request,
+              (io.grpc.stub.StreamObserver<site.wendev.spring.boot.istio.client.api.HelloWorldService.HelloResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -232,7 +239,7 @@ public final class HelloWorldGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return HelloWorldService.getDescriptor();
+      return site.wendev.spring.boot.istio.client.api.HelloWorldService.getDescriptor();
     }
 
     @java.lang.Override

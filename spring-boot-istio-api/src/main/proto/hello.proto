@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option java_package = "site.wendev.spring.boot.istio.api";
+option java_package = "site.wendev.spring.boot.istio.client.api";
 option java_outer_classname = "HelloWorldService";
 
 package helloworld;
