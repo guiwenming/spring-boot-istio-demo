@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
         - name: spring-boot-istio-server
-          image: $REGISTRY/$HARBOR_NAMESPACE/$APP_NAME-server-$BRANCH_NAME:SNAPSHOT-$BUILD_NUMBER
+          image: wendev-docker.pkg.coding.net/develop/docker/spring-boot-istio-server:0.0.1-SNAPSHOT
           imagePullPolicy: Always
           tty: true
           ports:

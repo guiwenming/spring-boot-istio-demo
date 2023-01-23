@@ -64,7 +64,7 @@ spec:
     spec:
       containers:
         - name: spring-boot-istio-server
-          image: $REGISTRY/$HARBOR_NAMESPACE/$APP_NAME:SNAPSHOT-$BRANCH_NAME-$BUILD_NUMBER
+          image: $REGISTRY/$HARBOR_NAMESPACE/$APP_NAME-server-$BRANCH_NAME:SNAPSHOT-$BUILD_NUMBER
           imagePullPolicy: IfNotPresent
           tty: true
           ports:
