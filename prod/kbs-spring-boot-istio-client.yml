@@ -1,0 +1,71 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: spring-boot-istio-client
+  namespace: test-devops-ingress
+  labels:
+    app: spring-boot-istio-client
+    app.kubernetes.io/name: spring-boot-istio-demo
+    app.kubernetes.io/version: v1
+  annotations:
+    kubesphere.io/creator: test-devops-project-regular
+    kubesphere.io/workloadType: Deployment
+    servicemesh.kubesphere.io/enabled: 'true'
+spec:
+  ports:
+    - name: http
+      protocol: TCP
+      port: 19090
+      targetPort: 19090
+  selector:
+    app: spring-boot-istio-client
+    app.kubernetes.io/name: spring-boot-istio-demo
+    app.kubernetes.io/version: v1
+  type: ClusterIP
+  sessionAffinity: None
+  ipFamilies:
+    - IPv4
+  ipFamilyPolicy: SingleStack
+  internalTrafficPolicy: Cluster
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: spring-boot-istio-client
+  namespace: test-devops-ingress
+  labels:
+    app: spring-boot-istio-client
+    app.kubernetes.io/name: spring-boot-istio-demo
+    app.kubernetes.io/version: v1
+    version: v1
+  annotations:
+    deployment.kubernetes.io/revision: '1'
+    kubesphere.io/creator: test-devops-project-regular
+    kubesphere.io/isElasticReplicas: 'false'
+    servicemesh.kubesphere.io/enabled: 'true'
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spring-boot-istio-client
+      app.kubernetes.io/name: spring-boot-istio-demo
+      app.kubernetes.io/version: v1
+      version: v1
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: spring-boot-istio-client
+        app.kubernetes.io/name: spring-boot-istio-demo
+        app.kubernetes.io/version: v1
+    spec:
+      containers:
+        - name: spring-boot-istio-client
+          image: $REGISTRY/$HARBOR_NAMESPACE/$APP_NAME-client-$BRANCH_NAME:SNAPSHOT-$BUILD_NUMBER
+          imagePullPolicy: IfNotPresent
+          tty: true
+          ports:
+            - name: http
+              protocol: TCP
+              containerPort: 19090

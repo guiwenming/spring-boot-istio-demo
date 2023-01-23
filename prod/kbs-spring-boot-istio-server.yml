@@ -1,0 +1,76 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: spring-boot-istio-server
+  namespace: test-devops-ingress
+  labels:
+    app: spring-boot-istio-server
+    app.kubernetes.io/name: spring-boot-istio-demo
+    app.kubernetes.io/version: v1
+  annotations:
+    kubesphere.io/creator: test-devops-project-regular
+    kubesphere.io/workloadType: Deployment
+    servicemesh.kubesphere.io/enabled: 'true'
+spec:
+  type: ClusterIP
+  ports:
+    - name: http
+      protocol: TCP
+      port: 18080
+      targetPort: 18080
+    - name: grpc
+      protocol: TCP
+      port: 18888
+      targetPort: 18888
+  selector:
+    app: spring-boot-istio-server
+    app.kubernetes.io/name: spring-boot-istio-demo
+    app.kubernetes.io/version: v1
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: spring-boot-istio-server
+  namespace: test-devops-ingress
+  labels:
+    app: spring-boot-istio-server
+    app.kubernetes.io/name: spring-boot-istio-demo
+    app.kubernetes.io/version: v1
+    version: v1
+  annotations:
+    deployment.kubernetes.io/revision: '1'
+    kubesphere.io/creator: test-devops-project-regular
+    kubesphere.io/isElasticReplicas: 'false'
+    servicemesh.kubesphere.io/enabled: 'true'
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spring-boot-istio-server
+      app.kubernetes.io/name: spring-boot-istio-demo
+      app.kubernetes.io/version: v1
+      version: v1
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: spring-boot-istio-server
+        app.kubernetes.io/name: spring-boot-istio-demo
+          app.kubernetes.io/version: v1
+          version: v1
+        annotations:
+          kubesphere.io/creator: test-devops-project-regular
+          sidecar.istio.io/inject: 'true'
+    spec:
+      containers:
+        - name: spring-boot-istio-server
+          image: $REGISTRY/$HARBOR_NAMESPACE/$APP_NAME:SNAPSHOT-$BRANCH_NAME-$BUILD_NUMBER
+          imagePullPolicy: IfNotPresent
+          tty: true
+          ports:
+            - name: http
+              protocol: TCP
+              containerPort: 18080
+            - name: grpc
+              protocol: TCP
+              containerPort: 18888
