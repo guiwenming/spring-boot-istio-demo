@@ -1,0 +1,29 @@
+apiVersion: app.k8s.io/v1beta1
+kind: Application
+metadata:
+  name: spring-boot-istio-demo
+  namespace: test-devops-ingress
+  labels:
+    app.kubernetes.io/version: v1
+    app.kubernetes.io/name: spring-boot-istio-demo
+  annotations:
+    servicemesh.kubesphere.io/enabled: 'true'
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/version: v1
+      app.kubernetes.io/name: spring-boot-istio-demo
+  addOwnerRef: true
+  componentKinds:
+    - group: ''
+      kind: Service
+    - group: apps
+      kind: Deployment
+    - group: apps
+      kind: StatefulSet
+    - group: networking.k8s.io
+      kind: Ingress
+    - group: servicemesh.kubesphere.io
+      kind: Strategy
+    - group: servicemesh.kubesphere.io
+      kind: ServicePolicy
