@@ -59,6 +59,7 @@ spec:
         app: spring-boot-istio-client
         app.kubernetes.io/name: spring-boot-istio-demo
         app.kubernetes.io/version: v1
+        version: v1
     spec:
       containers:
         - name: spring-boot-istio-client

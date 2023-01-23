@@ -56,11 +56,11 @@ spec:
       labels:
         app: spring-boot-istio-server
         app.kubernetes.io/name: spring-boot-istio-demo
-          app.kubernetes.io/version: v1
-          version: v1
-        annotations:
-          kubesphere.io/creator: test-devops-project-regular
-          sidecar.istio.io/inject: 'true'
+        app.kubernetes.io/version: v1
+        version: v1
+      annotations:
+        kubesphere.io/creator: test-devops-project-regular
+        sidecar.istio.io/inject: 'true'
     spec:
       containers:
         - name: spring-boot-istio-server
